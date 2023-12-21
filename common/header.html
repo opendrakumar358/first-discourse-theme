@@ -64,12 +64,13 @@
   </script>
 
   <script type="text/discourse-plugin">
-    api.addPostProcessHTMLCallback(() => {
-      // Change the text content
-      const topicsTab = document.querySelector('.nav-pills .topics-link a');
-      console.log(topicsTab);
-      if (topicsTab) {
-        topicsTab.textContent = 'Your Custom Text';
+    api.modifyClass('component:discover-categories-dropdown', {
+      didInsertElement() {
+        this._super(...arguments);
+        const allCategoriesLink = this.element.querySelector('.category-all-categories a');
+        if (allCategoriesLink) {
+          allCategoriesLink.textContent = 'Your Custom Text';
+        }
       }
     });
-    </script>
+  </script>
