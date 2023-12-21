@@ -62,3 +62,13 @@
     {{/each}}
   </tbody>
   </script>
+
+  <script type="text/discourse-plugin" version="0.8">
+    api.addPostProcessHTMLCallback(() => {
+      // Change the text content
+      const topicsTab = document.querySelector('.nav-pills .topics-link a');
+      if (topicsTab) {
+        topicsTab.textContent = 'Your Custom Text';
+      }
+    });
+    </script>
