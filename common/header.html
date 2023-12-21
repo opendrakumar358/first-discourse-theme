@@ -67,6 +67,7 @@
     api.addPostProcessHTMLCallback(() => {
       // Change the text content
       const topicsTab = document.querySelector('.nav-pills .topics-link a');
+      console.log(topicsTab);
       if (topicsTab) {
         topicsTab.textContent = 'Your Custom Text';
       }
