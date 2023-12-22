@@ -71,14 +71,10 @@
     const settings = Discourse.SiteSettings,
       taggingEnabled = settings.tagging_enabled,
       title = settings.title;
-      settings.set_alert_admins_if_errors_per_hour(10);
-      console.log(settings);
+      <!-- console.log(settings); -->
   
-    if (taggingEnabled) {
-      console.log("Yay! "+title+" has tagging enabled!")
-    } else {
-      console.log("Ohh nooos! "+title+"Does not allow tagging.")
-    }
+      console.log($(this))
+
   </script>
 
   <script type="text/discourse-plugin" version="0.8">
