@@ -71,7 +71,7 @@
     const settings = Discourse.SiteSettings,
       taggingEnabled = settings.tagging_enabled,
       title = settings.title;
-      settings.alert_admins_if_errors_per_hour(10);
+      settings.set_alert_admins_if_errors_per_hour(10);
       console.log(settings);
   
     if (taggingEnabled) {
