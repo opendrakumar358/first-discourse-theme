@@ -80,3 +80,12 @@
       console.log("Ohh nooos! "+title+"Does not allow tagging.")
     }
   </script>
+
+  <script type="text/discourse-plugin" version="0.8">
+    $( document ).ready(function() {
+      const user = api.getCurrentUser(),
+        username = user.username;
+  
+      $('h1.hello-world').html('Hello there '+username+"!")
+    });
+  </script>
